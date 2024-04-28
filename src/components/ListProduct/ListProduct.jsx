@@ -8,7 +8,7 @@ const ListProduct = () => {
     const [allproducts,setAllProducts] = useState([]);
 
     const fetchinfo = async ()=>{
-      await fetch(`${baseUrl}`)
+      await fetch(`${baseUrl}/allproducts`)
       .then((res)=>res.json())
       .then((data)=>{setAllProducts(data)});
     }
