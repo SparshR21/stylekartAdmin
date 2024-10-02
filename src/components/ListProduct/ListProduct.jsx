@@ -18,7 +18,7 @@ const ListProduct = () => {
     },[])
 
     const remove_product = async (id)=>{
-      await fetch(`${baseUrl}`,{
+      await fetch(`${baseUrl}/removeproduct`,{
         method:'POST',
         headers:{
           Accept:'applpiocation/json',
