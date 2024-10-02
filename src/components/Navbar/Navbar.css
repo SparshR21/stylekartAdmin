@@ -24,3 +24,22 @@
         width: 60px;
     }
 }
+.nav-profile-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logout-button {
+    margin-left: 10px; /* Adjust spacing as needed */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4d4d; /* A red color for logout */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #e60000; /* Darker shade on hover */
+  }
