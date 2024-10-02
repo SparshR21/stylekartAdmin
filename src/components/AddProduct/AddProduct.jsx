@@ -14,8 +14,6 @@ const AddProduct = () => {
       old_price:""
     })
 
-    const [password, setPassword] = useState('');
-    const [passwordCorrect, setPasswordCorrect] = useState(true);
 
     const imageHandler = (e)=>{
         setImage(e.target.files[0]);
@@ -23,19 +21,6 @@ const AddProduct = () => {
     const changeHandler = (e) => {
       setproductDetails({...productDetails,[e.target.name]:e.target.value})
     }
-
-    const validatePassword = () => {
-      const correctPassword = "thisisadmin"; // Set your password here
-      if (password === correctPassword) {
-          setPasswordCorrect(true);
-          return true;
-      } else {
-          setPasswordCorrect(false);
-          alert("You are not the Admin.");
-          return false;
-      }
-  };
-
     const add_product = async () => {
       console.log(productDetails);
       let responseData;
@@ -82,17 +67,6 @@ const AddProduct = () => {
 
   return (
     <div className='addproduct'>
-      <div className="addproduct-itemfield">
-                <p>Password</p>
-                <input 
-                    type="password" 
-                    value={password} 
-                    onChange={(e) => setPassword(e.target.value)} 
-                    placeholder='Enter password' 
-                    autoComplete='off' 
-                />
-                {!passwordCorrect && <p className="error-message">Incorrect password</p>}
-            </div>
       <div className="addproduct-itemfield">
         <p>Product Title</p>
         <input value={productDetails.name} onChange={changeHandler} type="text" name='name' placeholder='Type here' autoComplete='off' />
