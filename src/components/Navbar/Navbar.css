@@ -24,7 +24,6 @@
         width: 60px;
     }
 }
-
 .nav-profile-container {
     display: flex;
     align-items: center;
@@ -44,4 +43,3 @@
   .logout-button:hover {
     background-color: #e60000; /* Darker shade on hover */
   }
-  

@@ -14,56 +14,13 @@ const AddProduct = () => {
       old_price:""
     })
 
+
     const imageHandler = (e)=>{
         setImage(e.target.files[0]);
     }
     const changeHandler = (e) => {
       setproductDetails({...productDetails,[e.target.name]:e.target.value})
     }
-    // const add_product = async ()=>{
-    //   console.log(productDetails);
-    //   let responseData;
-    //   let product = productDetails;
-
-    //   let formData = new FormData();
-    //   formData.append('product',image);
-    //   formData.append('name', productDetails.name);
-    //   formData.append('category', productDetails.category);
-    //   formData.append('new_price', productDetails.new_price);
-    //   formData.append('old_price', productDetails.old_price);
-
-    //   await fetch('http://localhost:4000/upload',{
-    //     method:'POST',
-    //     headers:{
-    //       Accept:'application/json',
-    //     },
-    //     body:formData,
-    //   }).then((resp) => resp.json()).then((data)=>{responseData=data});
-      
-    //   if(responseData.success)
-    //   {
-    //     // product.image = responseData.image_url;
-    //     let product = {
-    //       name: productDetails.name,
-    //       image: responseData.Image_url,
-    //       category: productDetails.category,
-    //       new_price: productDetails.new_price,
-    //       old_price: productDetails.old_price,
-    //   };
-    //     console.log(product);
-    //     await fetch('http://localhost:4000/addproduct',{
-    //       method:'POST',
-    //       headers:{
-    //         Accept:'application/json',
-    //         'Content-Type':'application/json',
-    //       },
-    //       body:JSON.stringify(product),
-    //     }).then((resp)=>resp.json()).then((data)=>{
-    //       data.success?alert("Product Added"):alert("Failed")
-    //     });
-    //   }
-    // };
-
     const add_product = async () => {
       console.log(productDetails);
       let responseData;
